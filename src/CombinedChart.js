@@ -1,18 +1,39 @@
-import React,{ requireNativeComponent, Component, PropTypes, View } from 'react-native';
+'use strict';
 
-class BarChart extends Component {
+import React, { Component } from 'react';
+import { requireNativeComponent, PropTypes, View } from 'react-native';
+
+class CombinedChart extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
+        let chartData={};
+        let children=this.props.children;
+        if(children.length){
+            for (var i = 0; i < children.length; i++) {
+                var child=children[i]
+                chartData[child.props.chartType]=child.props.data;
+            }
+        }else{
+            chartData[children.props.chartType]=children.props.data;
+        }
+        let {
+            style,
+            data,
+            ...other
+            }=this.props;
         return (
-            <MPBarChart {...this.props}/>
+            <MPCombinedChart
+                style={this.props.style}
+                {...other}
+                data={chartData}/>
         );
     }
 }
 
-BarChart.propTypes = {
+CombinedChart.propTypes = {
     ...View.propTypes,
     data:PropTypes.object,
     touchEnabled:PropTypes.bool,
@@ -46,7 +67,7 @@ BarChart.propTypes = {
     scaleY: PropTypes.number,
     translateX: PropTypes.number,
     translateY: PropTypes.number,
-    rotation: PropTypes.number,	
+    rotation: PropTypes.number,
     renderToHardwareTextureAndroid: React.PropTypes.bool,
     onLayout: React.PropTypes.bool,
     accessibilityLiveRegion: React.PropTypes.string,
@@ -56,8 +77,36 @@ BarChart.propTypes = {
     testID: React.PropTypes.string,
     viewCenter: React.PropTypes.array,
     zoomTo: PropTypes.object
+};
+
+class chart extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render(){
+        return null;
+    }
 }
+chart.propTypes = {
+    chartType:PropTypes.string,
+    data:PropTypes.object
+};
+CombinedChart.Chart=chart;
 
-var MPBarChart = requireNativeComponent('MPBarChart', BarChart);
+// RIGHT_OF_CHART,
+//  RIGHT_OF_CHART_CENTER,
+//  RIGHT_OF_CHART_INSIDE,
+//  LEFT_OF_CHART,
+//  LEFT_OF_CHART_CENTER,
+//  LEFT_OF_CHART_INSIDE,
+//  BELOW_CHART_LEFT,
+//  BELOW_CHART_RIGHT,
+//  BELOW_CHART_CENTER,
+//  ABOVE_CHART_LEFT,
+//  ABOVE_CHART_RIGHT,
+//  ABOVE_CHART_CENTER,
+//  PIECHART_CENTER;
 
-export default BarChart;
+var MPCombinedChart = requireNativeComponent('MPCombinedChart', CombinedChart);
+
+export default CombinedChart;

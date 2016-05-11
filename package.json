@@ -1,14 +1,14 @@
 {
-  "name": "react-native-chart-android",
+  "name": "react-native-android-charts",
   "version": "1.0.2",
-  "description": "react-native-mpchart provide modules to add chart to android,all charts are come from mpandroidchart library.",
+  "description": "'react-native-mpchart' provides modules to add charts to React Native Android. All charts proxy the MPAndroidChart library.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hongyin163/react-native-chart-android.git"
+    "url": "https://github.com/gooftroop/react-native-chart-android.git"
   },
   "keywords": [
     "chart",
@@ -17,7 +17,7 @@
   "author": "hongyin163",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hongyin163/react-native-chart-android/issues"
+    "url": "https://github.com/gooftroop/react-native-chart-android/issues"
   },
-  "homepage": "https://github.com/hongyin163/react-native-chart-android#readme"
+  "homepage": "https://github.com/gooftroop/react-native-chart-android#readme"
 }

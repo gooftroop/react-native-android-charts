@@ -1,13 +1,13 @@
-import BarChart from './BarChart.android';
-import LineChart from './LineChart.android';
-import CandleStickChart from './CandleStickChart.android';
-import CombinedChart from './CombinedChart.android';
-import PieChart from './PieChart.android';
+import BarChart from './src/BarChart';
+import LineChart from './src/LineChart';
+import CandleStickChart from './src/CandleStickChart';
+import CombinedChart from './src/CombinedChart';
+import PieChart from './src/PieChart';
 
 export {
-	BarChart,
-	LineChart,
-	CandleStickChart,
-	CombinedChart,
-	PieChart
+    BarChart,
+    LineChart,
+    CandleStickChart,
+    CombinedChart,
+    PieChart
 }

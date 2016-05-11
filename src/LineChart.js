@@ -1,18 +1,21 @@
-import React,{ requireNativeComponent, Component, PropTypes, View } from 'react-native';
+'use strict';
 
-class PieChart extends Component {
+import React, { Component } from 'react';
+import { requireNativeComponent, PropTypes, View } from 'react-native';
+
+class LineChart extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <MPPieChart {...this.props}/>
+            <MPLineChart {...this.props}/>
         );
     }
 }
 
-PieChart.propTypes = {
+LineChart.propTypes = {
     ...View.propTypes,
     data:PropTypes.object,
     touchEnabled:PropTypes.bool,
@@ -32,17 +35,20 @@ PieChart.propTypes = {
     backgroundColor:PropTypes.string,
     drawGridBackground:PropTypes.bool,
     gridBackgroundColor:PropTypes.string,
+    visibleXRange:PropTypes.array,
     borderColor:PropTypes.string,
     borderWidth:PropTypes.number,
+    xAxis:PropTypes.object,
+    yAxisLeft:PropTypes.object,
+    yAxisRight:PropTypes.object,
+    yAxis:PropTypes.object,
+    fitScreen:PropTypes.bool,
     chartPadding:PropTypes.string,
     legend:PropTypes.object,
-    holeRadius: PropTypes.number,
-    drawSliceText: PropTypes.bool,
-    usePercentValues: PropTypes.bool,
-    centerText: PropTypes.string,
-    centerTextRadiusPercent: PropTypes.number
+    viewCenter: PropTypes.array,
+    zoomTo: PropTypes.object
 }
 
-var MPPieChart = requireNativeComponent('MPPieChart', PieChart);
+var MPLineChart = requireNativeComponent('MPLineChart', LineChart);
 
-export default PieChart;
+export default LineChart;

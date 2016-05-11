@@ -1,36 +1,21 @@
-import React,{ requireNativeComponent, Component, PropTypes, View } from 'react-native';
+'use strict';
 
-class CombinedChart extends Component {
+import React, { Component } from 'react';
+import { requireNativeComponent, PropTypes, View } from 'react-native';
+
+class CandleStickChart extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        let chartData={};
-        let children=this.props.children;
-        if(children.length){
-            for (var i = 0; i < children.length; i++) {
-                var child=children[i]
-                chartData[child.props.chartType]=child.props.data;
-            }
-        }else{
-            chartData[children.props.chartType]=children.props.data;
-        }
-        let {
-            style,
-            data,
-            ...other
-            }=this.props;
         return (
-            <MPCombinedChart
-                style={this.props.style}
-                {...other}
-                data={chartData}/>
+            <MPCandleStickChart {...this.props}/>
         );
     }
 }
 
-CombinedChart.propTypes = {
+CandleStickChart.propTypes = {
     ...View.propTypes,
     data:PropTypes.object,
     touchEnabled:PropTypes.bool,
@@ -74,36 +59,8 @@ CombinedChart.propTypes = {
     testID: React.PropTypes.string,
     viewCenter: React.PropTypes.array,
     zoomTo: PropTypes.object
-};
+  }
 
-class chart extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render(){
-        return null;
-    }
-}
-chart.propTypes = {
-    chartType:PropTypes.string,
-    data:PropTypes.object
-};
-CombinedChart.Chart=chart;
+var MPCandleStickChart = requireNativeComponent('MPCandleStickChart', CandleStickChart);
 
-// RIGHT_OF_CHART,
-//  RIGHT_OF_CHART_CENTER,
-//  RIGHT_OF_CHART_INSIDE,
-//  LEFT_OF_CHART,
-//  LEFT_OF_CHART_CENTER,
-//  LEFT_OF_CHART_INSIDE,
-//  BELOW_CHART_LEFT,
-//  BELOW_CHART_RIGHT,
-//  BELOW_CHART_CENTER,
-//  ABOVE_CHART_LEFT,
-//  ABOVE_CHART_RIGHT,
-//  ABOVE_CHART_CENTER,
-//  PIECHART_CENTER;
-
-var MPCombinedChart = requireNativeComponent('MPCombinedChart', CombinedChart);
-
-export default CombinedChart;
+export default CandleStickChart;
