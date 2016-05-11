@@ -45,19 +45,19 @@ public class ChartView extends View {
                 attrs, R.styleable.ChartView, defStyle, 0);
 
         mExampleString = a.getString(
-                R.styleable.ChartView_exampleString);
+                R.styleable.ChartView_exampleChartString);
         mExampleColor = a.getColor(
-                R.styleable.ChartView_exampleColor,
+                R.styleable.ChartView_exampleChartColor,
                 mExampleColor);
         // Use getDimensionPixelSize or getDimensionPixelOffset when dealing with
         // values that should fall on pixel boundaries.
         mExampleDimension = a.getDimension(
-                R.styleable.ChartView_exampleDimension,
+                R.styleable.ChartView_exampleChartDimension,
                 mExampleDimension);
 
-        if (a.hasValue(R.styleable.ChartView_exampleDrawable)) {
+        if (a.hasValue(R.styleable.ChartView_exampleChartDrawable)) {
             mExampleDrawable = a.getDrawable(
-                    R.styleable.ChartView_exampleDrawable);
+                    R.styleable.ChartView_exampleChartDrawable);
             mExampleDrawable.setCallback(this);
         }
 
