@@ -5,7 +5,7 @@ var React = require('react-native');
 var TitleBar=require('./TitleBar');
 var {
 	LineChart
-}=require('../index.android');
+}=require('../index');
 var {
   StyleSheet,
   View,
@@ -39,7 +39,7 @@ var Component = React.createClass({
 					}
 				}
 			]
-		};	
+		};
 		return data;
 	},
 	getRandomData:function (argument) {
@@ -66,18 +66,18 @@ var Component = React.createClass({
 				<TitleBar/>
 				<View style={styles.chartContainer}>
 					<LineChart style={{flex:1}} data={this.getLineData()}/>
-					<LineChart 
-						style={{flex:1}} 
+					<LineChart
+						style={{flex:1}}
 						data={this.getRandomData()}
 						visibleXRange={[0,30]}
-						maxVisibleValueCount={50} 
-				        xAxis={{drawGridLines:false,gridLineWidth:1,position:"BOTTOM"}}
-				        yAxisRight={{enable:false}} 
-				        yAxis={{startAtZero:false,drawGridLines:false,position:"INSIDE_CHART"}}
-				        drawGridBackground={false}
-				        backgroundColor={"WHITE"} 
-				        description={"测试"}
-				        legend={{enable:true,position:'ABOVE_CHART_LEFT',direction:"LEFT_TO_RIGHT"}}
+						maxVisibleValueCount={50}
+						xAxis={{drawGridLines:false,gridLineWidth:1,position:"BOTTOM"}}
+						yAxisRight={{enable:false}}
+						yAxis={{startAtZero:false,drawGridLines:false,position:"INSIDE_CHART"}}
+						drawGridBackground={false}
+						backgroundColor={"WHITE"}
+						description={"测试"}
+						legend={{enable:true,position:'ABOVE_CHART_LEFT',direction:"LEFT_TO_RIGHT"}}
 						/>
 				</View>
 			</View>

@@ -6,7 +6,7 @@ var TitleBar=require('./TitleBar');
 var {
 	BarChart,
 	CombinedChart
-}=require('../index.android');
+}=require('../index');
 var {
   StyleSheet,
   View,
@@ -40,7 +40,7 @@ var Component = React.createClass({
 					}
 				}
 			]
-		};	
+		};
 		return data;
 	},
 	getRandomData:function (argument) {
@@ -67,18 +67,18 @@ var Component = React.createClass({
 				<TitleBar/>
 				<View style={styles.chartContainer}>
 					<BarChart style={{flex:1}} data={this.getBarData()}/>
-					<BarChart 
-						style={{flex:1}} 
+					<BarChart
+						style={{flex:1}}
 						data={this.getRandomData()}
 						visibleXRange={[0,30]}
-						maxVisibleValueCount={50} 
-				        xAxis={{drawGridLines:false,gridLineWidth:1,position:"BOTTOM"}}
-				        yAxisRight={{enable:false}} 
-				        yAxis={{startAtZero:false,drawGridLines:false,position:"INSIDE_CHART"}}
-				        drawGridBackground={false}
-				        backgroundColor={"WHITE"} 
-				        description={"测试"}
-				        legend={{enable:true,position:'ABOVE_CHART_LEFT',direction:"LEFT_TO_RIGHT"}}
+						maxVisibleValueCount={50}
+						xAxis={{drawGridLines:false,gridLineWidth:1,position:"BOTTOM"}}
+						yAxisRight={{enable:false}}
+						yAxis={{startAtZero:false,drawGridLines:false,position:"INSIDE_CHART"}}
+						drawGridBackground={false}
+						backgroundColor={"WHITE"}
+						description={"测试"}
+						legend={{enable:true,position:'ABOVE_CHART_LEFT',direction:"LEFT_TO_RIGHT"}}
 						/>
 				</View>
 			</View>

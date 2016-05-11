@@ -10,13 +10,13 @@ var {
 } = React;
 
 var Component = React.createClass({
-	onBack:function (argument) {		
+	onBack:function (argument) {
 		 NativeAppEventEmitter.emit('back');
 	},
 	render: function() {
 		return (
 		  <View style={styles.container}>
-		  	<Button text={"返回"} style={styles.button} onPress={this.onBack}/>
+			<Button text={"返回"} style={styles.button} onPress={this.onBack}/>
 		  </View>
 		);
 	}
