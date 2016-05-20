@@ -1,5 +1,6 @@
 # Charts and Graphs for React Native Android
-<code>react-native-android-charts</code> provides the bindings to leverage MpAndroidCharts on you React Native Android app.
+<code>react-native-android-charts</code> provides the bindings to leverage MpAndroidCharts on your React Native Android app.
+
 Forked from [honguin163's initial implementation](https://github.com/hongyin163/react-native-chart-android)
 
 Get started wtih MpAndroidChart:
