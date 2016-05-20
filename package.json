@@ -8,16 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gooftroop/react-native-chart-android.git"
+    "url": "https://github.com/gooftroop/react-native-android-charts.git"
   },
   "keywords": [
     "chart",
-    "mpandroidchart"
+    "mpandroidchart",
+    "react-native",
+    "android"
   ],
-  "author": "hongyin163",
+  "author": "bwebb",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gooftroop/react-native-chart-android/issues"
+    "url": "https://github.com/gooftroop/react-native-android-charts/issues"
   },
-  "homepage": "https://github.com/gooftroop/react-native-chart-android#readme"
+  "homepage": "https://github.com/gooftroop/react-native-android-charts#readme"
 }
