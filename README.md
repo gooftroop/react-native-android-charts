@@ -1,7 +1,8 @@
-# react-native-chart-android
-react-native-chart-android provide modules to add chart to android,all charts are come from mpandroidchart library,include bar chart ,line chart,combine chart etc.
+# Charts and Graphs for React Native Android
+<code>react-native-android-charts</code> provides the bindings to leverage MpAndroidCharts on you React Native Android app.
+Forked from [honguin163's initial implementation](https://github.com/hongyin163/react-native-chart-android)
 
-about MpAndroidChart ,you can read doc:
+Get started wtih MpAndroidChart:
 
 -[**MPAndroidChart-github**](https://github.com/PhilJay/MPAndroidChart/) 
 -[**MPAndroidChart-Wiki**](https://github.com/PhilJay/MPAndroidChart/wiki) 
@@ -10,7 +11,7 @@ about MpAndroidChart ,you can read doc:
 ### Installation
 
 ```
-npm install react-native-chart-android --save
+npm install react-native-android-charts --save
 ```
 
 ### Add it to your android project
@@ -18,8 +19,8 @@ npm install react-native-chart-android --save
 * In `android/setting.gradle`
 
 ```gradle
-include ':react-native-chart-android'
-project(':react-native-chart-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-chart-android/android')
+include ':react-native-android-charts'
+project(':react-native-android-charts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-charts/android')
 ```
 
 * In `android/app/build.gradle`
@@ -28,7 +29,7 @@ project(':react-native-chart-android').projectDir = new File(rootProject.project
 ...
 dependencies {
   ...
-  compile project(':react-native-chart-android')
+  compile project(':react-native-android-charts')
 }
 ```
 
