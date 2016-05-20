@@ -5,6 +5,7 @@ Forked from [honguin163's initial implementation](https://github.com/hongyin163/
 Get started wtih MpAndroidChart:
 
 -[**MPAndroidChart-github**](https://github.com/PhilJay/MPAndroidChart/) 
+
 -[**MPAndroidChart-Wiki**](https://github.com/PhilJay/MPAndroidChart/wiki) 
 
 
