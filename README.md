@@ -1,4 +1,7 @@
 # Charts and Graphs for React Native Android
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/gooftroop/react-native-android-charts.svg)](https://greenkeeper.io/)
+
 <code>react-native-android-charts</code> provides the bindings to leverage MpAndroidCharts on your React Native Android app.
 
 Forked from [honguin163's initial implementation](https://github.com/hongyin163/react-native-chart-android)
